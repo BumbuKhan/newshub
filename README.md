@@ -1,6 +1,5 @@
 ## Setup instructions ##
 
-- Make sure that the version of Node
 - Install [Gulp](https://gulpjs.com/) globally by running `npm install gulp -g`
 - Navigate to the root dir of the project and type `npm istall` or `npm i`
 - Type `gulp` - project will be automatically launched on `http://localhost:3000`
