@@ -71,5 +71,11 @@ gulp.task('css:watch', function () {
     gulp.watch('./app/src/css/**/*.css', ['move_css']);
 });
 
+// move font
+gulp.task('move_fonts', function () {
+    return gulp.src('./app/src/fonts/*')
+        .pipe(gulp.dest('./app/dist/fonts/'))
+});
+
 // chainig default task
-gulp.task('default', gulpSequence('clean', 'sass', 'sass:watch', 'css:watch', 'move_img', 'move_js', 'js:watch', 'move_css', 'serve'));
+gulp.task('default', gulpSequence('clean', 'sass', 'sass:watch', 'css:watch', 'move_img', 'move_js', 'js:watch', 'move_css', 'move_fonts', 'serve'));

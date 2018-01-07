@@ -1,0 +1,32 @@
+@mixin border-radius-partial($radius, $part:null) {
+  @if ($part) {
+    -webkit-border-#{$part}-radius: $radius;
+    -moz-border-#{$part}-radius: $radius;
+    -ms-border-#{$part}-radius: $radius;
+    border-#{$part}-radius: $radius;
+  } @else {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+  }
+}
+
+@mixin border-radius($radius, $top-right:null, $bottom-right:null, $bottom-left:null, $top-left:null) {
+  @if ($top-right or $bottom-right or $bottom-left or $top-left) {
+    @if ($top-right) {
+      @include border-radius-partial($radius, 'top-right');
+    }
+    @if ($bottom-right) {
+      @include border-radius-partial($radius, 'bottom-right');
+    }
+    @if ($bottom-left) {
+      @include border-radius-partial($radius, 'bottom-left');
+    }
+    @if ($top-left) {
+      @include border-radius-partial($radius, 'top-left');
+    }
+  } @else {
+    @include border-radius-partial($radius);
+  }
+}
