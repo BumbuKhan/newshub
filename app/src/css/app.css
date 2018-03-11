@@ -1,0 +1,15 @@
+.feisty-pet-btn {
+    display: block;
+    padding: 7px;
+    background-color: #fff;
+    border: 3px #e0e0e0 solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    opacity: .5;
+}
+
+.feisty-pet-btn__active {
+    border-color: #2fbf2f;
+    opacity: 1;
+}
